@@ -7,13 +7,15 @@ export default function Login() {
   const [userName, changeUserName] = useState("");
   const [userPassword, changeUserPassword] = useState([]);
   const [userCheckBox, changeUserCheckBox] = useState(true);
+  const [msg, changeMsg] = useState("");
 
   const doLogin = () => {
     axios
       .get("https://swapi.dev/api//people/?search=" + userName)
       .then((response) => {
+
         if (response.data.results.length === 0) {
-          alert("incorrect data");
+          changeMsg("incorrect data");
         } else {
           let found = false;
           response.data.results.map((data) => {
@@ -22,12 +24,11 @@ export default function Login() {
             }
           });
           if (found) {
-            alert("Successfully login");
+            changeMsg("Successfully login");
           } else {
-            alert("incorrect data");
+            changeMsg("incorrect data");
           }
         }
-        console.log(response);
       })
       .catch((error) => {
         console.log(error);
@@ -64,6 +65,7 @@ export default function Login() {
         <button className="btn btn-primary" onClick={doLogin}>
           Login
         </button>
+        <p>{msg}</p>
       </div>
     </div>
   );
