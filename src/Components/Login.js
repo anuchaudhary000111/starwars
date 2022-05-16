@@ -1,12 +1,11 @@
 import "./login.css";
-import star from "../images/star.png";
+import scale from "../images/scale.jpeg";
 import { useState } from "react";
 import axios from "axios";
 
-export default function Login() {
+export default function Login({ changeIsLgoin }) {
   const [userName, changeUserName] = useState("");
   const [userPassword, changeUserPassword] = useState([]);
-  const [userCheckBox, changeUserCheckBox] = useState(true);
 
   const doLogin = () => {
     axios
@@ -22,7 +21,7 @@ export default function Login() {
             }
           });
           if (found) {
-            alert("Successfully login");
+            changeIsLgoin(true);
           } else {
             alert("incorrect data");
           }
@@ -36,32 +35,27 @@ export default function Login() {
 
   return (
     <div className="headr">
-      <img src={star} />
+      <img className="imageclass" width="100%" height="500px" src={scale} />
       <div className="head">
-        <p>
+        <p className="textbald">
           Username
           <input
+            className="inpuclass"
             value={userName}
             onChange={(e) => changeUserName(e.target.value)}
           />
         </p>
-        <p>
+        <p className="textbald">
           Password{" "}
           <input
+            className="inpuclass"
             value={userPassword}
             onChange={(e) => changeUserPassword(e.target.value)}
           />
         </p>
-        <p>
-          <input
-            type="checkBox"
-            value={userCheckBox}
-            onChange={(e) => changeUserCheckBox(e.target.value)}
-          />
-        </p>
       </div>
       <div>
-        <button className="btn btn-primary" onClick={doLogin}>
+        <button className="btn btn-primary btnclass" onClick={doLogin}>
           Login
         </button>
       </div>

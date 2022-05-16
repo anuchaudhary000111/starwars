@@ -1,7 +1,35 @@
-.head{
- margin: 10px;
- padding: 10px;
+.head {
+  margin: 10px;
+  padding: 10px;
 }
-.headr{
-    margin: 30px;
+.headr {
+  margin: 30px;
+}
+.imageclass {
+  border: 5px solid rgb(28, 120, 233);
+}
+.textbald {
+  font-size: larger;
+  /* margin: 2px; */
+}
+.textbalds {
+  font-size: larger;
+  /* margin: 2px; */
+  
+}
+.inpuclass {
+  /* margin: 8px; */
+  border-radius: 8px;
+  border: 1px solid black;
+}
+
+
+.btnclass {
+  width: 200px;
+  height: 40px;
+  padding: 5px;
+  font-size: larger;
+  margin-left: 80px;
+  border: 1px solid black;
+  border-radius: 8px;
 }

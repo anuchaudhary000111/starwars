@@ -1,0 +1,44 @@
+.imageclass1 {
+  border: 5px solid rgb(28, 120, 233);
+}
+
+.paragraphs {
+  font-weight: bold;
+  padding: 20px;
+}
+.searchtag {
+  width: 300px;
+  margin-bottom: 50px;
+  margin: 0 auto;
+}
+.inpuclas {
+  margin: 8px;
+  color: white;
+  border: 1px solid black;
+  background: rgb(34, 32, 3);
+}
+.mappara {
+  color: white;
+  width: 61%;
+  background: rgb(34, 32, 3);
+  margin: auto;
+  margin-top: -8px;
+  padding: 5px;
+}
+.btnclass1 {
+  width: 200px;
+  height: 40px;
+  padding: 5px;
+  font-size: larger;
+  margin-left: 80px;
+  border: 1px solid black;
+  border-radius: 8px;
+  margin: 50px;
+  margin: auto;
+  margin-top: 10px;
+  position: absolute;
+  right: 0;
+}
+.contain {
+  position: relative;
+}
